@@ -1,20 +1,7 @@
 ![](images/Broadcom.png)
 
-<br>
-<br>
-<br>
 # Broadcom SONiC 3.0.0 
 ### Configuration Database Manual
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 Table of Contents
 =================
