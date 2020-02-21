@@ -2,26 +2,21 @@
 
 ## aaa authentication failthrough 
 
-### Description 
+#### Description 
 
-```
 AAA authentication failthrough status 
 
+#### Parent Commands (Modes) 
 
-```
-### Parent Commands (Modes) 
+None
 
-```
-configure terminal
-
-```
-### Syntax 
+#### Syntax 
 
 ```
 aaa authentication failthrough <enable>
 
 ```
-### Parameters 
+#### Parameters 
 
 | Name | Description | Type |
 |:---:|:-----:|:-----:|
@@ -29,15 +24,14 @@ aaa authentication failthrough <enable>
 
 
 ## aaa authentication login-method 
-### Description 
-```
+#### Description 
+
 AAA authentication login method preference 
-```
-### Parent Commands (Modes) 
-```
-configure terminal
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+None
+
+#### Syntax 
 ```
 aaa authentication login-method { { [ local ] [ <tacacs+> ] [ <radius> ] } | { [ tacacs+ ] [ <local> ] } | { [ radius ] [ <local> ] } }
 no aaa authentication login-method
