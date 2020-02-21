@@ -1,6 +1,6 @@
 ![](images/Broadcom.png)
 
-# Broadcom SONiC 3.0.0 
+# Broadcom SONiC 3.0
 ### Command Line Interface Guide
 
 Table of Contents
