@@ -1,20 +1,7 @@
 ![](images/Broadcom.png)
 
-<br>
-<br>
-<br>
 # Broadcom SONiC 3.0.0 
 ### Command Line Interface Guide
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 Table of Contents
 =================
