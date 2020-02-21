@@ -19,7 +19,7 @@ aaa authentication failthrough <enable>
 
 | Name | Description | Type |
 |:---:|:-----:|:-----:|
-| `enable` | enable or disable  | Select [enable(enable) disable(disable) ]  |
+| enable | enable or disable  | Select [enable(enable) disable(disable) ]  |
 
 
 ## aaa authentication login-method 
@@ -1002,58 +1002,55 @@ no allowas-in { [ <value> ] | [ origin ] }
 | value |   | Integer  |
 
 ## always-compare-med 
-$$$
 #### Description 
-```
+
 Always compare the MED on routes, even when they were received from
 different neighbouring ASes. Setting this option makes the order of
 preference of routes more defined, and should eliminate MED induced
 oscillations.
-```
-### Parent Commands (Modes) 
-```
-router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }`
+
+#### Syntax 
 ```
 always-compare-med
 no always-compare-med
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to instruct BGP to always compare MED values for routes
 even if they are from different ASes
+
+#### Examples 
+Below command enables always-compare-med parameter 
 ```
-### Examples 
-#### Below command enables always-compare-med parameter 
-```
-sonic# configure terminal
 sonic(config)# router bgp 65300
 sonic(config-router-bgp)# always-compare-med
 ```
 ## as-override 
-### Description 
-```
+#### Description 
+
 This command instructs BGP to override AS Numbers in outbound updates if
 aspath equals remote-as
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 as-override
 no as-override
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to override the as number in outbound updates
+
+#### Examples 
+Following command configures BGP to override AS number          in as-path 
 ```
-### Examples 
-#### Following command configures BGP to override AS number          in as-path 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# neighbor 20.20.20.2
 sonic(config-router-bgp-neighbor)# remote-as 300
@@ -1061,114 +1058,112 @@ sonic(config-router-bgp-neighbor)# address-family ipv4 unicast
 sonic(config-router-bgp-neighbor-af)# as-override
 ```
 ## as-override 
-### Description 
-```
+#### Description 
+
 This command instructs BGP to override AS Numbers in outbound updates if
 aspath equals remote-as
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+##### Syntax 
 ```
 as-override
 no as-override
 ```
-### Usage Guidelines 
-```
+##### Usage Guidelines 
+
 Use this command to override the as number in outbound updates
+
+#### Examples 
+Following command configures BGP to override AS number          in as-path 
 ```
-### Examples 
-#### Following command configures BGP to override AS number          in as-path 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# peer-group PG_Ext
 sonic(config-router-bgp-pg)# address-family ipv4 unicast
 sonic(config-router-bgp-pg-af)# as-override
 ```
 ## as-override 
-### Description 
-```
+#### Description 
+
 Override ASNs in outbound updates if aspath equals remote-as 
-```
-### Parent Commands (Modes) 
+
+#### Parent Commands (Modes) 
 ```
 address-family ipv6 unicast
 ```
-### Syntax 
+#### Syntax 
 ```
 as-override
 no as-override
 ```
 ## as-override 
-### Description 
-```
+#### Description 
+
 Override ASNs in outbound updates if aspath equals remote-as 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 as-override
 no as-override
 ```
 ## as-override 
-### Description 
-```
+#### Description 
+
 Override ASNs in outbound updates if aspath equals remote-as 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 as-override
 no as-override
 ```
 ## as-override 
-### Description 
-```
+#### Description 
+
 Override ASNs in outbound updates if aspath equals remote-as 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 as-override
 no as-override
 ```
 ## attribute-unchanged 
-### Description 
-```
+#### Description 
+
 This command instructs BGP to propagate route attributes (as-path,
 next-hop, med) unchanged to this neighbor
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 attribute-unchanged [ as-path ] [ med ] [ next-hop ]
 no attribute-unchanged
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to propagate BGP route attributes unchanged to this
 neighbor. User can control which attributes (as-path, next-hop, med) i
 will be propagated unchanged.
+
+#### Examples 
+Following command configures BGP to propagate next-hop          and as-path unchanged to neighbor 20.20.20.2 
 ```
-### Examples 
-#### Following command configures BGP to propagate next-hop          and as-path unchanged to neighbor 20.20.20.2 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# neighbor 20.20.20.2
 sonic(config-router-bgp-neighbor)# remote-as 300
@@ -1176,208 +1171,207 @@ sonic(config-router-bgp-neighbor)# address-family ipv4 unicast
 sonic(config-router-bgp-neighbor-af)# attribute-unchanged as-path next-hop
 ```
 ## attribute-unchanged 
-### Description 
-```
+#### Description 
+
 This command instructs BGP to propagate route attributes (as-path,
 next-hop, med) unchanged to neighbors in a peer-group
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 attribute-unchanged [ as-path ] [ med ] [ next-hop ]
 no attribute-unchanged
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to propagate BGP route attributes unchanged to
 neighbors in a peer-group. User can control which attributes (as-path,
 next-hop, med) will be propagated unchanged.
+
+#### Examples 
+Following command configures BGP to propagate next-hop           and as-path unchanged to neighbors in a peer-group 
 ```
-### Examples 
-#### Following command configures BGP to propagate next-hop           and as-path unchanged to neighbors in a peer-group 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# peer-group PG_Ext
 sonic(config-router-bgp-pg)# address-family ipv4 unicast
 sonic(config-router-bgp-pg-af)# attribute-unchanged as-path next-hop
 ```
 ## attribute-unchanged 
-### Description 
-```
+#### Description 
+
 BGP attribute is propagated unchanged to this neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 attribute-unchanged [ as-path ] [ med ] [ next-hop ]
 no attribute-unchanged
 ```
 ## attribute-unchanged 
-### Description 
-```
+#### Description 
+
 BGP attribute is propagated unchanged to this neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 attribute-unchanged [ as-path ] [ med ] [ next-hop ]
 no attribute-unchanged
 ```
 ## attribute-unchanged 
-### Description 
-```
+#### Description 
+
 BGP attribute is propagated unchanged to this neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 attribute-unchanged [ as-path ] [ med ] [ next-hop ]
 no attribute-unchanged
 ```
 ## attribute-unchanged 
-### Description 
-```
+#### Description 
+
 BGP attribute is propagated unchanged to this neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 attribute-unchanged [ as-path ] [ med ] [ next-hop ]
 no attribute-unchanged
 ```
 ## autoneg 
-### Description 
-```
+#### Description 
+
 Configure autoneg 
-```
-### Parent Commands (Modes) 
-```
-interface Management <mgmt-if-id>
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`interface Management <mgmt-if-id>`
+
+#### Syntax 
 ```
 autoneg <autoneg>
 no autoneg
 ```
-### Parameters 
+#### Parameters 
 | Name | Description | Type |
 |:---:|:-----:|:-----:|
 | autoneg | on or off  | Select [on(true) off(false) ]  |
+
 ## autort 
-### Description 
-```
+#### Description 
+
 Auto-derivation of RT 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 autort rfc8365-compatible
 no autort rfc8365-compatible
 ```
 ## bestpath as-path confed 
-### Description 
-```
+#### Description 
+
 This command specifies that the length of confederation path sets and
 sequences should should be taken into account during the BGP best path
 decision process.
-```
-### Parent Commands (Modes) 
-```
-router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }`
+
+#### Syntax 
 ```
 bestpath as-path confed
 no bestpath as-path confed
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to consider confederation set and sequence path length
 for best-path selection process
+
+#### Examples 
+Below command instructs BGP to consider confederation          path length in as-path length comparison during best-path selection process 
+
 ```
-### Examples 
-#### Below command instructs BGP to consider confederation          path length in as-path length comparison during best-path selection process 
-```
-sonic# configure terminal
 sonic(config)# router bgp 65300
 sonic(config-router-bgp)# bestpath as-path confed
 ```
 ## bestpath as-path ignore 
-### Description 
-```
+#### Description 
+
 This command influences best-path selection algorithm by not comparing
 as-path attribute
-```
-### Parent Commands (Modes) 
-```
-router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }`
+
+#### Syntax 
 ```
 bestpath as-path ignore
 no bestpath as-path ignore
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to ignore as-path comparison during best-path selection
 process.
+
+#### Examples 
+Below command instructs BGP to ignore as-path comparison          during best-path selection process 
 ```
-### Examples 
-#### Below command instructs BGP to ignore as-path comparison          during best-path selection process 
-```
-sonic# configure terminal
 sonic(config)# router bgp 65300
 sonic(config-router-bgp)# bestpath as-path ignore
 ```
 ## bestpath as-path multipath-relax 
-### Description 
-```
+#### Description 
+
 This command specifies that BGP decision process should consider paths
 of equal AS_PATH length candidates for multipath computation. Without
 the knob, the entire AS_PATH must match for multipath computation.
-```
-### Parent Commands (Modes) 
-```
-router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }`
+
+#### Syntax 
 ```
 bestpath as-path multipath-relax [ as-set ]
 no bestpath as-path multipath-relax [ as-set ]
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to ignore as-path check for paths for the same prefix
-thereby making all the paths equal irrespctive of their as-path
+making all the paths equal irrespctive of their as-path
+
+#### Examples 
+Below command relaxes as-path comparison for multipath          case during best-path selection process 
 ```
-### Examples 
-#### Below command relaxes as-path comparison for multipath          case during best-path selection process 
-```
-sonic# configure terminal
 sonic(config)# router bgp 65300
 sonic(config-router-bgp)# bestpath as-path multipath-relax
 ```
 ## bestpath compare-routerid 
-### Description 
+$$$
+#### Description 
 ```
 This command influences best-path selection algorithm by comparing
 router-ids for identical eBGP routes
