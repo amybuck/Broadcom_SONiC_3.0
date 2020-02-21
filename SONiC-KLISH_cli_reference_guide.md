@@ -8,13 +8,12 @@ AAA authentication failthrough status
 
 #### Parent Commands (Modes) 
 
-None
+`config t`
 
 #### Syntax 
 
 ```
 aaa authentication failthrough <enable>
-
 ```
 #### Parameters 
 
@@ -29,44 +28,43 @@ aaa authentication failthrough <enable>
 AAA authentication login method preference 
 
 #### Parent Commands (Modes) 
-None
+`config t`
 
 #### Syntax 
 ```
 aaa authentication login-method { { [ local ] [ <tacacs+> ] [ <radius> ] } | { [ tacacs+ ] [ <local> ] } | { [ radius ] [ <local> ] } }
 no aaa authentication login-method
 ```
-### Parameters 
+#### Parameters 
 | Name | Description | Type |
 |:---:|:-----:|:-----:|
 | tacacs+ |   | Select [tacacs+(tacacs+) ]  |
 | radius |   | Select [radius(radius) ]  |
 | local |   | Select [local(local) ]  |
 ## activate 
-### Description 
-```
+#### Description 
+
 This command enables/activates a particular address-family for a BGP
 neighbor
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 activate
 no activate
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to activate an address-family for a BGP neighbor.
 This command can be executed multiple times to enable multiple address
 familities for a BGP neighbor
+
+#### Examples 
+Following command enables ipv4 unicast address family            for a BGP neighbor 20.20.20.2 
 ```
-### Examples 
-#### Following command enables ipv4 unicast address family            for a BGP neighbor 20.20.20.2 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# neighbor 20.20.20.2
 sonic(config-router-bgp-neighbor)# remote-as 300
@@ -74,30 +72,29 @@ sonic(config-router-bgp-neighbor)# address-family ipv4 unicast
 sonic(config-router-bgp-neighbor-af)# activate
 ```
 ## activate 
-### Description 
-```
+#### Description 
+
 This command enables/activates a particular address-family for a BGP
 peer-group
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 activate
 no activate
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to activate an address-family for a BGP peer-group.
 This command can be executed multiple times to enable multiple address
 familities for a BGP peer-group
+
+#### Examples 
+Following command enables ipv4 unicast address family            for a BGP peer-group PG_External 
 ```
-### Examples 
-#### Following command enables ipv4 unicast address family            for a BGP peer-group PG_External 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# peer-group PG_Ext
 sonic(config-router-bgp-pg)# remote-as 300
@@ -105,84 +102,83 @@ sonic(config-router-bgp-pg)# address-family ipv4 unicast
 sonic(config-router-bgp-pg-af)# activate
 ```
 ## activate 
-### Description 
-```
+#### Description 
+
 Enable the Address Family for this Neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 activate
 no activate
 ```
 ## activate 
-### Description 
-```
+#### Description 
+
 Enable the Address Family for this Neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 activate
 no activate
 ```
 ## activate 
-### Description 
-```
+#### Description 
+
 Enable the Address Family for this Neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 activate
 no activate
 ```
 ## activate 
-### Description 
-```
+#### Description 
+
 Enable the Address Family for this Neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 activate
 no activate
 ```
 ## addpath-tx-all-paths 
-### Description 
-```
+#### Description 
+
 This command enables BGP to advertise all paths to a neighbor.
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 addpath-tx-all-paths
 no addpath-tx-all-paths
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command for BGP add path feature configuration. This command
 allows all BGP paths to be advertised to a neighbor
+
+#### Examples 
+Following command configures BGP to advertise          all paths to a neighbor 
 ```
-### Examples 
-#### Following command configures BGP to advertise          all paths to a neighbor 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# neighbor 20.20.20.2
 sonic(config-router-bgp-neighbor)# remote-as 300
@@ -190,113 +186,110 @@ sonic(config-router-bgp-neighbor)# address-family ipv4 unicast
 sonic(config-router-bgp-neighbor-af)# addpath-tx-all-paths
 ```
 ## addpath-tx-all-paths 
-### Description 
-```
+#### Description 
+
 This command enables BGP to advertise all paths to neighbors in a
 peer-group.
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 addpath-tx-all-paths
 no addpath-tx-all-paths
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command for BGP add path feature configuration. This command
 allows all BGP paths to be advertised to neighbors in a peer-group
+
+#### Examples 
+Following command configures BGP to advertise all paths           to neighbors in a peer-group 
 ```
-### Examples 
-#### Following command configures BGP to advertise all paths           to neighbors in a peer-group 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# peer-group PG_Ext
 sonic(config-router-bgp-pg)# address-family ipv4 unicast
 sonic(config-router-bgp-pg-af)# addpath-tx-all-paths
 ```
 ## addpath-tx-all-paths 
-### Description 
-```
+#### Description 
+
 Use addpath to advertise all paths to a neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 addpath-tx-all-paths
 no addpath-tx-all-paths
 ```
 ## addpath-tx-all-paths 
-### Description 
-```
+#### Description 
+
 Use addpath to advertise all paths to a neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 addpath-tx-all-paths
 no addpath-tx-all-paths
 ```
 ## addpath-tx-all-paths 
-### Description 
-```
+#### Description 
+
 Use addpath to advertise all paths to a neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 addpath-tx-all-paths
 no addpath-tx-all-paths
 ```
 ## addpath-tx-all-paths 
-### Description 
-```
+#### Description 
+
 Use addpath to advertise all paths to a neighbor 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 addpath-tx-all-paths
 no addpath-tx-all-paths
 ```
 ## addpath-tx-bestpath-per-AS 
-### Description 
-```
+#### Description 
 This command enables BGP to advertise best paths to a neighbor.
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 addpath-tx-bestpath-per-AS
 no addpath-tx-bestpath-per-AS
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command for BGP add path feature configuration. This command
 allows best BGP path to be advertised to a neighbor
+
+#### Examples 
+Following command configures BGP to advertise best path to a neighbor 
 ```
-### Examples 
-#### Following command configures BGP to advertise best path to a neighbor 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# neighbor 20.20.20.2
 sonic(config-router-bgp-neighbor)# remote-as 300
@@ -304,235 +297,230 @@ sonic(config-router-bgp-neighbor)# address-family ipv4 unicast
 sonic(config-router-bgp-neighbor-af)# addpath-tx-bestpath-per-AS
 ```
 ## addpath-tx-bestpath-per-AS 
-### Description 
-```
+#### Description 
+
 This command enables BGP to advertise best paths to neighbors in a
 peer-group.
-```
-### Parent Commands (Modes) 
-```
-address-family ipv4 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv4 unicast`
+
+#### Syntax 
 ```
 addpath-tx-bestpath-per-AS
 no addpath-tx-bestpath-per-AS
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command for BGP add path feature configuration. This command
 allows best BGP path to be advertised to neighbors in a peer-group
+
+#### Examples 
+Following command configures BGP to advertise best path          to neighbors in a peer-group 
 ```
-### Examples 
-#### Following command configures BGP to advertise best path          to neighbors in a peer-group 
-```
-sonic# configure terminal
 sonic(config)# router bgp 100
 sonic(config-router-bgp)# peer-group PG_Ext
 sonic(config-router-bgp-pg)# address-family ipv4 unicast
 sonic(config-router-bgp-pg-af)# addpath-tx-bestpath-per-AS
 ```
 ## addpath-tx-bestpath-per-AS 
-### Description 
-```
+#### Description 
+
 Use addpath to advertise the bestpath per each neighboring AS 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 addpath-tx-bestpath-per-AS
 no addpath-tx-bestpath-per-AS
 ```
 ## addpath-tx-bestpath-per-AS 
-### Description 
-```
+#### Description 
+
 Use addpath to advertise the bestpath per each neighboring AS 
-```
-### Parent Commands (Modes) 
-```
-address-family ipv6 unicast
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family ipv6 unicast`
+
+#### Syntax 
 ```
 addpath-tx-bestpath-per-AS
 no addpath-tx-bestpath-per-AS
 ```
 ## addpath-tx-bestpath-per-AS 
-### Description 
-```
+#### Description 
+
 Use addpath to advertise the bestpath per each neighboring AS 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 addpath-tx-bestpath-per-AS
 no addpath-tx-bestpath-per-AS
 ```
 ## addpath-tx-bestpath-per-AS 
-### Description 
-```
+#### Description 
+
 Use addpath to advertise the bestpath per each neighboring AS 
-```
-### Parent Commands (Modes) 
-```
-address-family l2vpn evpn
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`address-family l2vpn evpn`
+
+#### Syntax 
 ```
 addpath-tx-bestpath-per-AS
 no addpath-tx-bestpath-per-AS
 ```
 ## address-family ipv4 
-### Description 
-```
+#### Description 
+
 This command enters into IPv4 Unicast address-family configure CLI
 context
-```
-### Parent Commands (Modes) 
-```
-router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }`
+
+#### Syntax 
 ```
 address-family ipv4 unicast
 no address-family ipv4 unicast
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to switch to IPv4 Unicast address family CLI context to
 configure parameters specific to this address family
+
+#### Examples 
+Below command switches the CLI context to IPv4 Unicast          address family 
 ```
-### Examples 
-#### Below command switches the CLI context to IPv4 Unicast          address family 
-```
-         sonic# configure terminal
-         sonic(config)# router bgp 65300
-         sonic(config-router-bgp)# address-family ipv4 unicast
-         sonic(config-router-bgp-af)#
+sonic(config)# router bgp 65300
+sonic(config-router-bgp)# address-family ipv4 unicast
+sonic(config-router-bgp-af)#
 ```
 ## address-family ipv4 
-### Description 
-```
+#### Description 
+
 This command enters into IPv4 Unicast address-family configuration CLI
 context for a BGP neighbor
-```
-### Parent Commands (Modes) 
-```
-neighbor { <ip> | { interface { Ethernet | PortChannel | Vlan } } }
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`neighbor { <ip> | { interface { Ethernet | PortChannel | Vlan } } }`
+
+#### Syntax 
 ```
 address-family ipv4 unicast
 no address-family ipv4 unicast
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to switch to IPv4 Unicast address family CLI context of
 a BGP neighbor to configure parameters specific to this address family
+
+#### Examples 
+Below command switches the CLI context to IPv4 Unicast          address family for neighbor 30.30.30.3 
 ```
-### Examples 
-#### Below command switches the CLI context to IPv4 Unicast          address family for neighbor 30.30.30.3 
-```
-         sonic# configure terminal
-         sonic(config)# router bgp 65300
-         sonic(config-router-bgp)# neighbor 30.30.30.3
-         sonic(config-router-bgp-neighbor)# address-family ipv4 unicast
-         sonic(config-router-bgp-neighbor-af)#
+sonic(config)# router bgp 65300
+sonic(config-router-bgp)# neighbor 30.30.30.3
+sonic(config-router-bgp-neighbor)# address-family ipv4 unicast
+sonic(config-router-bgp-neighbor-af)#
 ```
 ## address-family ipv4 
-### Description 
-```
+#### Description 
+
 This command switches the CLI context into IPv4 Unicast address-family
 mode for a BGP peer-group
-```
-### Parent Commands (Modes) 
-```
-peer-group <template-str>
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`peer-group <template-str>`
+
+#### Syntax 
 ```
 address-family ipv4 unicast
 no address-family ipv4 unicast
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to switch to IPv4 Unicast address family CLI context of
 a BGP peer-group to configure parameters specific to this address family
+
+#### Examples 
+Below command switches the CLI context to IPv4 Unicast          address family for peer-group PG_Ext 
 ```
-### Examples 
-#### Below command switches the CLI context to IPv4 Unicast          address family for peer-group PG_Ext 
-```
-         sonic# configure terminal
-         sonic(config)# router bgp 65300
-         sonic(config-router-bgp)# peer-group PG_Ext
-         sonic(config-router-bgp-pg)# address-family ipv4 unicast
-         sonic(config-router-bgp-pg-af)#
+sonic(config)# router bgp 65300
+sonic(config-router-bgp)# peer-group PG_Ext
+sonic(config-router-bgp-pg)# address-family ipv4 unicast
+sonic(config-router-bgp-pg-af)#
 ```
 ## address-family ipv6 
-### Description 
-```
+#### Description 
+
 This command execution enters into IPv6 Unicast address-family configure CLI
 context
-```
-### Parent Commands (Modes) 
-```
-router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`router bgp { <as-num-dot> { [ vrf ] <vrf-name> } }`
+
+#### Syntax 
 ```
 address-family ipv6 unicast
 no address-family ipv6 unicast
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to switch to IPv6 Unicast address family CLI context to
 configure parameters specific to this address family
+
+#### Examples 
+Below command switches the CLI context to IPv6 Unicast          address family 
 ```
-### Examples 
-#### Below command switches the CLI context to IPv6 Unicast          address family 
-```
-         sonic# configure terminal
-         sonic(config)# router bgp 65300
-         sonic(config-router-bgp)# address-family ipv6 unicast
-         sonic(config-router-bgp-af)#
+sonic(config)# router bgp 65300
+sonic(config-router-bgp)# address-family ipv6 unicast
+sonic(config-router-bgp-af)#
 ```
 ## address-family ipv6 
-### Description 
-```
+#### Description 
+
 This command execution enters into IPv6 Unicast address-family configuration CLI
 context for a BGP neighbor
-```
-### Parent Commands (Modes) 
-```
-neighbor { <ip> | { interface { Ethernet | PortChannel | Vlan } } }
-```
-### Syntax 
+
+#### Parent Commands (Modes) 
+
+`neighbor { <ip> | { interface { Ethernet | PortChannel | Vlan } } }`
+
+#### Syntax 
 ```
 address-family ipv6 unicast
 no address-family ipv6 unicast
 ```
-### Usage Guidelines 
-```
+#### Usage Guidelines 
+
 Use this command to switch to IPv6 Unicast address family CLI context of
 a BGP neighbor to configure parameters specific to this address family
+
+#### Examples 
+Below command switches the CLI context to IPv6 Unicast          address family for neighbor 30.30.30.3 
 ```
-### Examples 
-#### Below command switches the CLI context to IPv6 Unicast          address family for neighbor 30.30.30.3 
-```
-         sonic# configure terminal
-         sonic(config)# router bgp 65300
-         sonic(config-router-bgp)# neighbor 30.30.30.3
-         sonic(config-router-bgp-neighbor)# address-family ipv6 unicast
-         sonic(config-router-bgp-neighbor-af)#
+sonic(config)# router bgp 65300
+sonic(config-router-bgp)# neighbor 30.30.30.3
+sonic(config-router-bgp-neighbor)# address-family ipv6 unicast
+sonic(config-router-bgp-neighbor-af)#
 ```
 ## address-family ipv6 
-### Description 
+$$$
+#### Description 
 ```
 This command switches the CLI context into IPv6 Unicast address-family
 mode for a BGP peer-group
