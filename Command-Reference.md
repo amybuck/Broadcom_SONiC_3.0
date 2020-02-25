@@ -4,8 +4,8 @@
 
    * [Document History](#document-history)
    * [Introduction](#introduction)
-   * [Basic Configuration And Show](#basic-configuration-and-show)
-      * [SSH Login](#ssh-login)
+   * [1.0 Basic Configuration And Show](#basic-configuration-and-show)
+      * [1.1 SSH Login](#ssh-login)
       * [Configuring Management Interface](#configuring-management-interface)
       * [Config Help](#config-help)
       * [Show Help](#show-help)
@@ -295,7 +295,7 @@ The direct scripts/utilities/commands (examples given below) that are not wrappe
   1)	Acl_loader: This script is already wrapped inside "config acl" command; i.e. any ACL configuration that user is allowed to do is already part of "config acl" command; users are not expected to use the acl_loader script directly and hence this document need not explain the "acl_loader" script.
   2)	Sonic-clear, sfputil, etc., This document does not explain these scripts also. 
 
-# Basic Configuration And Show  
+# 1.0 Basic Configuration And Show  
 
 This section covers the basic configurations related to the following
  1) [SSH login](#SSH-Login), 
@@ -306,7 +306,7 @@ This section covers the basic configurations related to the following
  6) [Show System Status](#Show-System-Status) and 
  7) [Show Hardware Platform](#Show-Hardware-Platform).
 
-## SSH Login
+## 1.1 SSH Login
 
 All SONiC devices support both the serial console based login and the SSH based login by default.
 The default credential (if not modified at image build time) for login is `admin/YourPaSsWoRd`.
@@ -330,7 +330,7 @@ By default, login takes the user to the default prompt from which all the show c
 
 Go Back To [Beginning of the document](#SONiC-COMMAND-LINE-INTERFACE-GUIDE) or [Beginning of this section](#Basic-Configuration-And-Show)
 
-## Configuring Management Interface
+## 1.2 Configuring Management Interface
 
 The management interface (eth0) in SONiC is configured (by default) to use DHCP client to get the IP address from the DHCP server. Connect the management interface to the same network in which your DHCP server is connected and get the IP address from DHCP server.
 The IP address received from DHCP server can be verified using the "/sbin/ifconfig eth0" linux command.
@@ -355,7 +355,7 @@ Users can SSH login to this management interface IP address from their managemen
    ```
 Go Back To [Beginning of the document](#SONiC-COMMAND-LINE-INTERFACE-GUIDE) or [Beginning of this section](#Basic-Configuration-And-Show)
 
-## Config Help  
+## 1.3 Config Help  
 
 All commands has got in-built help that helps the user to understand the command as well as the possible sub-commands and options.
 "--help" can be used at any level of the command; i.e. it can be used at the command level, or sub-command level or at argument level. The in-built help will display the next possibilities corresponding to that particular command/sub-command.
@@ -402,7 +402,7 @@ This command lists all the possible configuration commands at the top level.
   ```
   Go Back To [Beginning of the document](#SONiC-COMMAND-LINE-INTERFACE-GUIDE) or [Beginning of this section](#Basic-Configuration-And-Show)
 
-## Show Help  
+## 1.4 Show Help  
 
 **show help**  
 This command displays the full list of show commands available in the software; the output of each of those show commands can be used to analyze, debug or troubleshoot the network node.
