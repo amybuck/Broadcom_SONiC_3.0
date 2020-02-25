@@ -2,8 +2,6 @@
 
 # Broadcom SONiC 3.0 User Manual
 
-   * [SONiC USER MANUAL](#sonic-user-manual)
-   * [Table of Contents](#table-of-contents)
    * [Introduction](#introduction)
    * [1 Quick Start Guide](#1-quick-start-guide)
       * [1.1 Download Image](#11-download-image)
