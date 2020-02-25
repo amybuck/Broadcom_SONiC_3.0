@@ -1,9 +1,5 @@
 # The SONiC CLI Reference Guide 
 
-Contents
-========
-
-
 ## aaa authentication failthrough 
 
 #### Description 
