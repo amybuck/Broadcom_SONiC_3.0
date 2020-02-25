@@ -6,9 +6,9 @@
 
    * [Introduction](#introduction)
    * [Configuration](#configuration)
-   * [<strong>Config Load and Save</strong>](#config-load-and-save)  
+   * [Config Load and Save](#config-load-and-save)  
          * [Incremental Configuration](#incremental-configuration)  
-   * [<strong>Redis and Json Schema</strong>](#redis-and-json-schema)  
+   * [Redis and Json Schema](#redis-and-json-schema)  
          * [ACL and Mirroring](#acl-and-mirroring)  
          * [BGP Sessions](#bgp-sessions)  
          * [BGP Error Handling](#bgp-error-handling)  
