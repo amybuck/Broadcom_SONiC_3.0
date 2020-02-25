@@ -1,3 +1,5 @@
+![](images/Broadcom.png)
+
 # The SONiC CLI Reference Guide 
 
 ## aaa authentication failthrough 
