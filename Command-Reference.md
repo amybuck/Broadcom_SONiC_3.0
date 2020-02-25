@@ -1,9 +1,8 @@
 ![](images/Broadcom.png)
 
-# Broadcom SONiC 3.0
-### Command Line Interface Guide
+# Broadcom SONiC 3.0 Command Line Interface Guide
 
-Table of Contents
+Contents
 =================
 
    * [Document History](#document-history)
