@@ -1,10 +1,8 @@
 ![](images/Broadcom.png)
 
-# Broadcom SONiC 3.0 
-### Configuration Database Manual
+# Broadcom SONiC 3.0 Configuration Database Manual
 
-Contents
-=================
+# Contents
 
    * [Introduction](#introduction)
    * [Configuration](#configuration)
