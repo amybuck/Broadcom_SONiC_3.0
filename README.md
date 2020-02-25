@@ -1,3 +1,5 @@
+![](images/Broadcom.png)
+
 # Welcome
 Welcome to the Software for open networking in the cloud (SONiC) provides mechanisms for configuring and operating the various functions of a switch developed by Broadcom. 
 
