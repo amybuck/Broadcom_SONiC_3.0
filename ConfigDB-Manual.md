@@ -1,12 +1,12 @@
 ![](images/Broadcom.png)
 
-# Broadcom SONiC 3.0
+# Broadcom SONiC 3.0 
 ### Configuration Database Manual
 
-Table of Contents
+Contents
 =================
 
-   * [INTRODUCTION](#introduction)
+   * [Introduction](#introduction)
    * [Configuration](#configuration)
    * [<strong>Config Load and Save</strong>](#config-load-and-save)  
          * [Incremental Configuration](#incremental-configuration)  
@@ -87,7 +87,7 @@ Table of Contents
 | 2    | Nov 22, 2019 | v2               | Broadcom SONiC 2.1.0 Release |
 | 3    | Feb 16, 2020 | v3               | Broadcom SONiC 3.0.0 Release |
 
-# INTRODUCTION																																									
+# Introduction																																									
 This document lists the configuration commands schema applied in the SONiC eco system. All these commands find relevance in collecting system information, analysis and even for trouble shooting. All the commands are categorized under relevant topics with corresponding examples.  																																																																					
 
 # Configuration
