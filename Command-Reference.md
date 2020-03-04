@@ -3600,7 +3600,7 @@ This command displays all the configured IPv4 DHCP Server address configurations
     +------------------+-----------------------+
     | Ethernet52       | 10.10.1.2             |
     +------------------+-----------------------+
-    ```
+```
 
 **show ip dhcp-relay statistics <interface_name>**
 
