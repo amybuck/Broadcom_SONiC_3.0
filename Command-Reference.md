@@ -3436,9 +3436,8 @@ These commands display threshold type, low and high thresholds configured for a 
 - Example:  
   ```
   admin@sonic:$ crm show thresholds acl group
-  ```
 
-  ```
+
   Resource Name    Threshold Type      Low Threshold    High Threshold
   ---------------  ----------------  ---------------  ----------------
   acl_group        used                           30                90
@@ -3449,15 +3448,16 @@ These commands display threshold type, low and high thresholds configured for a 
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
----------------  ----------------  ---------------  ----------------
+  ---------------  ----------------  ---------------  ----------------
   acl_table        used                           30                90
   ```
+  
   ```
   admin@sonic:$ crm show thresholds all
 
 
   Resource Name         Threshold Type      Low Threshold    High Threshold
---------------------  ----------------  ---------------  ----------------
+  --------------------  ----------------  ---------------  ----------------
   ipv4_route            used                           30                90
   ipv6_route            used                           30                90
   ipv4_nexthop          used                           30                90
@@ -3472,12 +3472,13 @@ These commands display threshold type, low and high thresholds configured for a 
   acl_counter           used                           30                90
   fdb_entry             used                           30                90
   ```
-    ```
+
+```
   admin@sonic:$ crm show thresholds fdb
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
----------------  ----------------  ---------------  ----------------
+  ---------------  ----------------  ---------------  ----------------
   fdb_entry        used                           30                90
   ```
   ```
@@ -3485,7 +3486,7 @@ These commands display threshold type, low and high thresholds configured for a 
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
----------------  ----------------  ---------------  ----------------
+  ---------------  ----------------  ---------------  ----------------
   ipv4_nexthop     used                           30                90
   ```
   ```
@@ -3493,7 +3494,7 @@ These commands display threshold type, low and high thresholds configured for a 
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
----------------  ----------------  ---------------  ----------------
+  ---------------  ----------------  ---------------  ----------------
   ipv6_neighbor    used                           30                90
   ```
 
@@ -3502,7 +3503,7 @@ These commands display threshold type, low and high thresholds configured for a 
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
----------------  ----------------  ---------------  ----------------
+  ---------------  ----------------  ---------------  ----------------
   nexthop_group    used                           30                90
   ```
   ```
@@ -3510,7 +3511,7 @@ These commands display threshold type, low and high thresholds configured for a 
 
 
   Resource Name         Threshold Type      Low Threshold    High Threshold
---------------------  ----------------  ---------------  ----------------
+  --------------------  ----------------  ---------------  ----------------
   nexthop_group_member  used                           30                90
   ```
 
