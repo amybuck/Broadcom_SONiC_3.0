@@ -3291,9 +3291,8 @@ These commands display currently USED and AVAILABLE number of entries for a crit
   ```
   admin@sonic:$ crm show resources all
 
-
   Resource Name           Used Count    Available Count
---------------------  ------------  -----------------
+  --------------------  ------------  -----------------
   ipv4_route                    1007              48145
   ipv6_route                    1004              11284
   ipv4_nexthop                   100              32544
@@ -3305,10 +3304,8 @@ These commands display currently USED and AVAILABLE number of entries for a crit
   fdb_entry                       30              40929
 
 
-
-
   Stage    Bind Point    Resource Name      Used Count    Available Count
--------  ------------  ---------------  ------------  -----------------
+  -------  ------------  ---------------  ------------  -----------------
   INGRESS  PORT          acl_group                   1               1023
   INGRESS  PORT          acl_table                   2                  2
   INGRESS  LAG           acl_group                   0               1023
@@ -3331,19 +3328,16 @@ These commands display currently USED and AVAILABLE number of entries for a crit
   EGRESS   SWITCH        acl_table                   0                  2
 
 
-
-
   Table ID         Resource Name      Used Count    Available Count
----------------  ---------------  ------------  -----------------
+  ---------------  ---------------  ------------  -----------------
   0x70000000009e3  acl_entry                  20                492
   0x70000000009e3  acl_counter                20              30148
-
-  admin@sonic:$ crm show resources acl group
   ```
-
+  ```
+  admin@sonic:$ crm show resources acl group
 
   Stage    Bind Point    Resource Name      Used Count    Available Count
--------  ------------  ---------------  ------------  -----------------
+  -------  ------------  ---------------  ------------  -----------------
   INGRESS  PORT          acl_group                   0               1024
   INGRESS  PORT          acl_table                   0                  3
   INGRESS  LAG           acl_group                   0               1024
@@ -3450,15 +3444,15 @@ These commands display threshold type, low and high thresholds configured for a 
   acl_group        used                           30                90
   ```
 
-
+  ```
   admin@sonic:$ crm show thresholds acl table
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
 ---------------  ----------------  ---------------  ----------------
   acl_table        used                           30                90
-
-
+  ```
+  ```
   admin@sonic:$ crm show thresholds all
 
 
@@ -3477,40 +3471,41 @@ These commands display threshold type, low and high thresholds configured for a 
   acl_entry             used                           30                90
   acl_counter           used                           30                90
   fdb_entry             used                           30                90
-
+  ```
+    ```
   admin@sonic:$ crm show thresholds fdb
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
 ---------------  ----------------  ---------------  ----------------
   fdb_entry        used                           30                90
-
-
+  ```
+  ```
   admin@sonic:$ crm show thresholds ipv4 nexthop
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
 ---------------  ----------------  ---------------  ----------------
   ipv4_nexthop     used                           30                90
-
-
+  ```
+  ```
   admin@sonic:$ crm show thresholds ipv6 neighbor
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
 ---------------  ----------------  ---------------  ----------------
   ipv6_neighbor    used                           30                90
+  ```
 
-
-
+  ```
   admin@sonic:$ crm show thresholds nexthop group object
 
 
   Resource Name    Threshold Type      Low Threshold    High Threshold
 ---------------  ----------------  ---------------  ----------------
   nexthop_group    used                           30                90
-
-
+  ```
+  ```
   admin@sonic:$ crm show thresholds nexthop group member
 
 
