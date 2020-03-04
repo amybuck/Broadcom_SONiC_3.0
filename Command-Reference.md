@@ -3290,7 +3290,6 @@ These commands display currently USED and AVAILABLE number of entries for a crit
 - Example:  
   ```
   admin@sonic:$ crm show resources all
-  ```
 
 
   Resource Name           Used Count    Available Count
@@ -3365,47 +3364,47 @@ These commands display currently USED and AVAILABLE number of entries for a crit
   EGRESS   RIF           acl_table                   0                  2
   EGRESS   SWITCH        acl_group                   0               1024
   EGRESS   SWITCH        acl_table                   0                  2
+  ```
 
-
+```
   admin@sonic:$ crm show resources fdb
 
 
   Resource Name      Used Count    Available Count
 ---------------  ------------  -----------------
   fdb_entry                   2              40957
-
-
+```
+```
   admin@sonic:$ crm show resources ipv4 route
 
 
   Resource Name      Used Count    Available Count
 ---------------  ------------  -----------------
   ipv4_route                  1              49151
-
-
+```
+```
   admin@sonic:$ crm show resources ipv6 neighbor
 
 
   Resource Name      Used Count    Available Count
 ---------------  ------------  -----------------
   ipv6_neighbor               0              10240
-
-
+```
+```
   admin@sonic:$ crm show resources nexthop group object
 
 
   Resource Name      Used Count    Available Count
 ---------------  ------------  -----------------
   nexthop_group               0                128
-
-
+```
+```
   admin@sonic:$ crm show resources nexthop group member
 
 
   Resource Name           Used Count    Available Count
 --------------------  ------------  -----------------
   nexthop_group_member             0              16384
-
   ```
 
 **summary**
