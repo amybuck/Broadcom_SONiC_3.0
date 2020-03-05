@@ -6963,7 +6963,8 @@ This command displays a list of NTP peers known to the server as well as a summa
   ==============================================================================
    23.92.29.245    .XFAC.          16 u    - 1024    0    0.000    0.000   0.000
   *204.2.134.164   46.233.231.73    2 u  916 1024  377    3.079    0.394   0.128
-  ```
+  
+```
 
 Go Back To [Beginning of the document](#SONiC-COMMAND-LINE-INTERFACE-GUIDE) or [Beginning of this section](#NTP)
 
@@ -6973,10 +6974,12 @@ This section explains all the IGMP Snooping configuration and show commands that
 
 
 ## IGMP Snooping configuration commands 
+
 This section explains the list of configuration options available for IGMP snooping. Use `no` version of these commands to remove non-default values configured. 
 
 - Usage:
-  ```
+
+```
 ip igmp snooping { [ querier ] | [ fast-leave ] | { [ query-interval ] <query-interval-val> } | { [ last-member-query-interval ] <last-mem-query-interval-val> } | { [ query-max-response-time ] <query-max-response-val> } | { [ version ] <igmps-version-val> } | { [ mrouter ] { interface <mrouter-if-name> } } | { [ static-group ] { <group-addr> { interface <grp-if-name> } } } }
 no ip igmp snooping { [ querier ] | [ fast-leave ] | [ query-interval ] | [ last-member-query-interval ] | [ query-max-response-time ] | [ version ] | { [ mrouter ] { interface <mrouter-if-name> } } | { [ static-group ] { <group-addr> { interface <grp-if-name> } } } }
 ```
@@ -7138,6 +7141,7 @@ Use this command to administratively enable the capability of kernel core file g
 - Usage:
        config kdump enable
 - Example:
+
 ```
 root@sonic:/home/admin# config kdump enable
 ```
@@ -7151,6 +7155,7 @@ Use this command to administratively disable the capability of kernel core file 
 - Usage:
          config kdump disable
 - Example:
+
 ```
 root@sonic:/home/admin# config kdump disable
 ```
@@ -7164,6 +7169,7 @@ Use this command to set the amount of memory reserved for the capture kernel cal
 - Usage: 
          config kdump memory <memory-string>
 - Example:
+	
 ```
 root@sonic:/home/admin# config kdump memory 0M-2G:256M,2G-4G:320M,4G-8G:512M,8G-:1024M
 ```
@@ -7193,6 +7199,7 @@ Use this command to control the number of kernel core files that can be stored l
 - Usage: 
       config kdump num_dumps <number>
 - Example:
+	
 ```
 root@sonic:/home/admin# config kdump num_dumps 4
 ```
@@ -7248,6 +7255,7 @@ This command is used to display the kernel core files stored locally.
 - Usage: 
       show kdump log <record> <number of lines>
 - Example:
+	
 ```
 root@sonic:/home/admin# show kdump files
 Record Key           Filename
@@ -7411,12 +7419,12 @@ This command displays the configured PFC mode on an interface or all interfaces.
 
 - Example:  
 
-  ```
+```
   admin@sonic:~$ sudo pfc show asymmetric Ethernet9
 
 
   Interface    Asymmetric
------------  ------------
+  -----------  ------------
   Ethernet9    on
 
 
@@ -7424,7 +7432,7 @@ This command displays the configured PFC mode on an interface or all interfaces.
 
 
   Interface    Asymmetric
------------  ------------
+  -----------  ------------
   Ethernet0    N/A
   Ethernet4    on
   Ethernet5    N/A
@@ -7478,7 +7486,7 @@ This command displays/removes the Pause Frames statistics for Rx and Tx priority
 ```
     admin@sonic:~$ sudo pfcstat 
       Port Rx    PFC0    PFC1    PFC2    PFC3    PFC4    PFC5    PFC6    PFC7
------------  ------  ------  ------  ------  ------  ------  ------  ------
+  -----------  ------  ------  ------  ------  ------  ------  ------  ------
           CPU       0       0       0       0       0       0       0       0
     Ethernet0       0       0       0       0       0       0       0       0
     Ethernet4       0       0       0       0       0       0       0       0
@@ -7520,7 +7528,7 @@ This command displays/removes the Pause Frames statistics for Rx and Tx priority
   Ethernet124       0       0       0       0       0       0       0       0
 
       Port Tx    PFC0    PFC1    PFC2    PFC3    PFC4    PFC5    PFC6    PFC7
------------  ------  ------  ------  ------  ------  ------  ------  ------
+  -----------  ------  ------  ------  ------  ------  ------  ------  ------
           CPU       0       0       0       0       0       0       0       0
     Ethernet0       0       0       0       0       0       0       0       0
     Ethernet4       0       0       0   11805       0       0       0       0
@@ -7643,13 +7651,13 @@ This command displays the PFC watchdog configuration like action, detection time
   admin@sonic:~$ sudo pfcwd show config Ethernet8
   Changed polling interval to 100ms
        PORT    ACTION    DETECTION TIME    RESTORATION TIME
----------  --------  ----------------  ------------------
+  ---------  --------  ----------------  ------------------
   Ethernet8      drop               400                3000
 
   admin@sonic:~$ sudo pfcwd show config 
   Changed polling interval to 100ms
          PORT    ACTION    DETECTION TIME    RESTORATION TIME
------------  --------  ----------------  ------------------
+  -----------  --------  ----------------  ------------------
     Ethernet0      drop               400                3000
     Ethernet4      drop               400                3000
     Ethernet5      drop               400                3000
