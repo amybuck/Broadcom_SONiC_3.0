@@ -8487,9 +8487,10 @@ This command can be used to clear the counters for all queues of all ports or on
     show queue counters [-c or --clear] [<interface_name>]
 
 - Example:
-   ```
+
     This example gives the sample output from two ports Ethernet0 and Ethernet4.
-    
+
+   ```
     admin@sonic:~$ show queue counters 
          Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes
     ---------  -----  --------------  ---------------  -----------  ------------
@@ -8567,7 +8568,7 @@ This command can be used to clear the counters for all queues of all ports or on
 
   admin@sonic:~$ show queue counters CPU
      Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes
-------  -----  --------------  ---------------  -----------  ------------
+  ------  -----  --------------  ---------------  -----------  ------------
       CPU    MC0               0                0            0             0
       CPU    MC1               0                0            0             0
       CPU    MC2               0                0            0             0
@@ -8592,7 +8593,7 @@ This command displays the user watermark for the queues (Egress shared pool occu
   admin@sonic:~$ show queue  watermark unicast
   Egress shared pool occupancy per unicast queue:
          Port    UC0    UC1    UC2    UC3    UC4    UC5    UC6    UC7
------------  -----  -----  -----  -----  -----  -----  -----  -----
+  -----------  -----  -----  -----  -----  -----  -----  -----  -----
     Ethernet0      0      0      0      0      0      0      0      0
     Ethernet4      0      0      0      0      0      0      0      0
     Ethernet8      0      0      0      0      0      0      0      0
@@ -8613,7 +8614,7 @@ This command displays the user watermark or persistent-watermark for the Ingress
   admin@sonic:~$ show priority-group  watermark shared
   Ingress shared pool occupancy per PG:
          Port    PG0    PG1    PG2    PG3    PG4    PG5    PG6    PG7
------------  -----  -----  -----  -----  -----  -----  -----  -----
+  -----------  -----  -----  -----  -----  -----  -----  -----  -----
     Ethernet0      0      0      0      0      0      0      0      0
     Ethernet4      0      0      0      0      0      0      0      0
     Ethernet8      0      0      0      0      0      0      0      0
@@ -8637,7 +8638,7 @@ This command displays the user persistet-watermark for the queues (Egress shared
   admin@sonic:~$ show queue persistent-watermark unicast
   Egress shared pool occupancy per unicast queue:
          Port    UC0    UC1    UC2    UC3    UC4    UC5    UC6    UC7
------------  -----  -----  -----  -----  -----  -----  -----  -----
+  -----------  -----  -----  -----  -----  -----  -----  -----  -----
     Ethernet0    N/A    N/A    N/A    N/A    N/A    N/A    N/A    N/A
     Ethernet4    N/A    N/A    N/A    N/A    N/A    N/A    N/A    N/A
     Ethernet8    N/A    N/A    N/A    N/A    N/A    N/A    N/A    N/A
@@ -8646,7 +8647,7 @@ This command displays the user persistet-watermark for the queues (Egress shared
   admin@sonic:~$ show queue persistent-watermark multicast (Egress shared pool occupancy per multicast queue)
 
   ```
-  ```
+
   Both "user watermark" and "persistent watermark" can be cleared by user: 
   ```
   root@sonic:~# sonic-clear queue persistent-watermark unicast
@@ -8723,6 +8724,7 @@ Some of the example QOS configurations that users can modify are given below.
      config qos reload 
 
 - Example:
+   ```
   root@T1-2:~# config qos reload 
   Running command: /usr/local/bin/sonic-cfggen -d -t /usr/share/sonic/device/x86_64-dell_z9100_c2538-r0/Force10-Z9100-C32/buffers.json.j2 >/tmp/buffers.json
   Running command: /usr/local/bin/sonic-cfggen -d -t /usr/share/sonic/device/x86_64-dell_z9100_c2538-r0/Force10-Z9100-C32/qos.json.j2 -y /etc/sonic/sonic_version.yml >/tmp/qos.json
