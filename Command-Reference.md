@@ -9476,77 +9476,77 @@ This command displays virtual address to the physical address translation status
   ```
   admin@T1-2:~$ show mmu
   Pool: ingress_lossless_pool
-----  --------
+  ----  --------
   xoff  4194112
   type  ingress
   mode  dynamic
   size  10875072
-----  --------
+  ----  --------
 
   Pool: egress_lossless_pool
-----  --------
+  ----  --------
   type  egress
   mode  static
   size  15982720
-----  --------
+  ----  --------
 
   Pool: egress_lossy_pool
-----  -------
+  ----  -------
   type  egress
   mode  dynamic
   size  9243812
-----  -------
+  ----  -------
 
   Profile: egress_lossy_profile
-----------  -------------------------------
+  ----------  -------------------------------
   dynamic_th  3
   pool        [BUFFER_POOL|egress_lossy_pool]
   size        1518
-----------  -------------------------------
+  ----------  -------------------------------
 
   Profile: pg_lossless_100000_300m_profile
-----------  -----------------------------------
+  ----------  -----------------------------------
   xon_offset  2288
   dynamic_th  -3
   xon         2288
   xoff        268736
   pool        [BUFFER_POOL|ingress_lossless_pool]
   size        1248
-----------  -----------------------------------
+  ----------  -----------------------------------
 
   Profile: egress_lossless_profile
----------  ----------------------------------
+  ---------  ----------------------------------
   static_th  3995680
   pool       [BUFFER_POOL|egress_lossless_pool]
   size       1518
----------  ----------------------------------
+  ---------  ----------------------------------
 
   Profile: pg_lossless_100000_40m_profile
-----------  -----------------------------------
+  ----------  -----------------------------------
   xon_offset  2288
   dynamic_th  -3
   xon         2288
   xoff        177632
   pool        [BUFFER_POOL|ingress_lossless_pool]
   size        1248
-----------  -----------------------------------
+  ----------  -----------------------------------
 
   Profile: ingress_lossy_profile
-----------  -----------------------------------
+  ----------  -----------------------------------
   dynamic_th  3
   pool        [BUFFER_POOL|ingress_lossless_pool]
   size        0
-----------  -----------------------------------
+  ----------  -----------------------------------
 
   Profile: pg_lossless_40000_40m_profile
-----------  -----------------------------------
+  ----------  -----------------------------------
   xon_offset  2288
   dynamic_th  -3
   xon         2288
   xoff        71552
   pool        [BUFFER_POOL|ingress_lossless_pool]
   size        1248
-----------  -----------------------------------
+  ----------  -----------------------------------
   ```
 
 
@@ -9610,7 +9610,7 @@ This command displays all the vlan configuration.
   ```
   admin@sonic:~$ show vlan config 
   Name       VID  Member     Mode
--------  -----  ---------  ------
+  -------  -----  ---------  ------
   Vlan100    100  Ethernet0  tagged
   Vlan100    100  Ethernet4  tagged
 
@@ -9724,9 +9724,9 @@ This command displays MAC age out interval.
 - Example:
 
   ```
-admin@sonic:~$ show mac aging_time
-Mac Aging-Time : 3000 seconds
-```
+  admin@sonic:~$ show mac aging_time
+  Mac Aging-Time : 3000 seconds
+   ```
 
 ### MAC age out config command
 
@@ -9741,9 +9741,11 @@ Use this command to change MAC ageout time, default MAC ageout is set as 600 sec
   Specifies ageout_internal in secs, range from 0 - 1000000, 0 to disable MAC aging 
 
 - Example: 
+
 ```
 admin@sonic:~$ config mac aging_time 3000
 This command will set MAC age out to 3000 secs
+
 ```
 
 ### Static MAC config command
@@ -9790,7 +9792,7 @@ This command displays the MAC (FDB) entries either in full or partial as given b
   ```
   admin@sonic:~$ show mac
   No.    Vlan  MacAddress         Port
------  ------  -----------------  -----------
+  -----  ------  -----------------  -----------
     1    1000  E2:8C:56:85:4A:CD  Ethernet192
     2    1000  A0:1B:5E:47:C9:76  Ethernet192
     3    1000  AA:54:EF:2C:EE:30  Ethernet192
@@ -9818,7 +9820,7 @@ This command displays the MAC (FDB) entries either in full or partial as given b
   ```
   admin@sonic:~$ show mac -v 1000
   No.    Vlan  MacAddress         Port
------  ------  -----------------  -----------
+  -----  ------  -----------------  -----------
     1    1000  E2:8C:56:85:4A:CD  Ethernet192
     2    1000  A0:1B:5E:47:C9:76  Ethernet192
     3    1000  AA:54:EF:2C:EE:30  Ethernet192
@@ -9841,7 +9843,7 @@ This command displays the MAC (FDB) entries either in full or partial as given b
 
   admin@sonic:~$ show mac -p Ethernet192
   No.    Vlan  MacAddress         Port
------  ------  -----------------  -----------
+  -----  ------  -----------------  -----------
     1    1000  E2:8C:56:85:4A:CD  Ethernet192
     2    1000  A0:1B:5E:47:C9:76  Ethernet192
     3    1000  AA:54:EF:2C:EE:30  Ethernet192
@@ -9889,13 +9891,13 @@ Command and options to clear MAC entries from FDB. When port or vlan is used, it
 - Example:
 
   ```
-admin@sonic:~$ sonic-clear fdb all
-All MAC entries are cleared from FDB
+  admin@sonic:~$ sonic-clear fdb all
+  All MAC entries are cleared from FDB
 
-admin@sonic:~$ sonic-clear fdb vlan Vlan101
-('Dynamic FDB entries are cleared on VLAN.', 'Vlan101')
-All MAC entries are cleared from vlan 101
-```
+  admin@sonic:~$ sonic-clear fdb vlan Vlan101
+  ('Dynamic FDB entries are cleared on VLAN.', 'Vlan101')
+  All MAC entries are cleared from vlan 101
+  ```
 
 Go Back To [Beginning of the document](#SONiC-COMMAND-LINE-INTERFACE-GUIDE) or [Beginning of this section](#vlan--FDB)
 
@@ -10242,7 +10244,7 @@ This command displays the warm_restart state.
 - Example:
   ```
   name          restore_count  state
-----------  ---------------  ----------
+  ----------  ---------------  ----------
   orchagent                 0
   vlanmgrd                  0
   bgp                       1  reconciled
