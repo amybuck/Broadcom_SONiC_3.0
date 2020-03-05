@@ -6073,13 +6073,7 @@ To create a new mclag domain, users need to configure the following fields
 
   ```
     root@sonic:/home/admin# config mclag add 10 10.1.1.1 10.1.1.2 PortChannel2
-                  
-
   ```
-
-
-
-
 
 **MCLAG Member Addition**
 
@@ -6098,10 +6092,7 @@ To add mclag interface(s) to mclag domain user needs to use below command with f
 
   ```
     root@sonic:/home/admin# config mclag member add 10 PortChannel10,PortChannel20                
-
   ```
-
-
 
 **MCLAG Member Deletion**
 
@@ -6162,9 +6153,6 @@ Take care of following requirement while configuring the timeout values
 
   ```
   root@sonic:/home/admin# config mclag keepalive-interval 10 5            
-  ```
-
-
   ```
 
 
@@ -6235,7 +6223,7 @@ This commands displays information about local interface state. It shows all mcl
   State: Up
   ------------------------------------------------------------
 
-------------------------------------------------------------
+  ------------------------------------------------------------
   Ifindex: 83
   Type: PortChannel
   PortName: PortChannel10
@@ -6298,7 +6286,7 @@ This commands displays information about peer interface state. This information 
   Warmboot:           0
 
   ICCP to MclagSyncd      TX_OK       TX_ERROR
-------------------      -----       --------
+  ------------------      -----       --------
   PortIsolation           13          0
   MacLearnMode            1           0
   FlushFdb                1           0
@@ -6315,13 +6303,13 @@ This commands displays information about peer interface state. This information 
   DelRemoteIntf           0           0
 
   MclagSyncd to          ICCP  RX_OK       RX_ERROR
-------------------     -----------       --------
+  ------------------     -----------       --------
   FdbChange               161616           0
   CfgMclag                1                0
   CfgMclagIface           1                0
 
   ICCP to Peer   TX_OK        RX_OK        TX_ERROR    RX_ERROR
-------------   -----        -----        --------    --------
+  ------------   -----        -----        --------    --------
   SysConfig      2            2            0           0
   AggrConfig     2            1            0           0
   AggrState      7            9            0           0 
@@ -6389,7 +6377,7 @@ sonic(config-mclag-domain)#[no] peer-link  <peer-if-name>
 - MCLAG domain add Example:
 
 ```
-   sonic(config)# mclag domain 10
+  sonic(config)# mclag domain 10
   sonic(config-mclag-domain-10)# source-ip 10.1.1.1
   sonic(config-mclag-domain-10)# peer-ip 10.1.1.2
   sonic(config-mclag-domain-10)# peer-link PortChannel 2
@@ -6575,13 +6563,13 @@ This command displays all the mirror sessions that are configured.
   ERSPAN Sessions
   ---------------------------------------------------------------------------------------------------------
   Name      Status    SRC IP    DST IP       GRE       DSCP    TTL    Queue  Policer    Monitor Port        SRC Port    Direction
---------  --------  --------  -----------  ------  ------  -----  -------  ---------  ------------------  ----------  -----------
+  --------  --------  --------  -----------  ------  ------  -----  -------  ---------  ------------------  ----------  -----------
   mrr_ers   active  1.2.3.4   20.21.22.23  0x6558       8    100        0             oid:0x7f620b159b00  Ethernet0   both
 
   SPAN Sessions
   --------------------------------------------------------
   Name      Status    DST Port    SRC Port    Direction
---------  --------  ----------  ----------  -----------
+  --------  --------  ----------  ----------  -----------
   mrr_span  active    Ethernet4   Ethernet8   rx
                   
   ```
@@ -6690,7 +6678,7 @@ This command displays the configuration of the NAT module.
 
 - Example:
 
-  ```
+```
 root@sonic:/home/admin# show nat config
 
 Global Values
