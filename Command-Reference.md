@@ -4632,13 +4632,10 @@ This command displays either all the route entries from the routing table or a s
          T - Table, v - VNC, V - VNC-Direct, A - Babel, D - SHARP,
          F - PBR, f - OpenFabric,
          > - selected route, * - FIB route # - not installed in hardware
-  ```
-
-
   VRF Vrf-Core:
   C>*  179.13.79.0/24 is directly connected, Ethernet204, 00:00:40
   C>*  192.168.42.0/24 is directly connected, Ethernet208, 00:00:37
-  ```
+```
 
 **show ip interfaces**  
 
