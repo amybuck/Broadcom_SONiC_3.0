@@ -8646,7 +8646,7 @@ This command displays the user persistet-watermark for the queues (Egress shared
   admin@sonic:~$ show queue persistent-watermark multicast (Egress shared pool occupancy per multicast queue)
 
   ```
-
+  ```
   Both "user watermark" and "persistent watermark" can be cleared by user: 
   ```
   root@sonic:~# sonic-clear queue persistent-watermark unicast
@@ -8777,9 +8777,6 @@ Note: When global pvst or rpvst mode is enabled, by default spanning tree will b
   admin@sonic:~$ sudo config spanning_tree enable rpvst
   ```
 
-  ```
-  
-  ```
 
 **config spanning_tree root_guard_timeout **
 
